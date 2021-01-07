@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SFMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="StockData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sDecimal" Type="nvarchar" MaxLength="50" />
+          <Property Name="sStockIdx" Type="nvarchar" MaxLength="50" />
+          <Property Name="sTypeNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="MarketNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="StockNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="StockName" Type="nvarchar" MaxLength="50" />
+          <Property Name="nAsk" Type="int" />
+          <Property Name="fAsk" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nBid" Type="int" />
+          <Property Name="fBid" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nOpen" Type="int" />
+          <Property Name="fOpen" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nClose" Type="int" />
+          <Property Name="fClose" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nUp" Type="int" />
+          <Property Name="fUp" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nDown" Type="int" />
+          <Property Name="fDown" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nHigh" Type="int" />
+          <Property Name="fHigh" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nLow" Type="int" />
+          <Property Name="fLow" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nRef" Type="int" />
+          <Property Name="fRef" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="nFutureOI" Type="int" />
+          <Property Name="nAc" Type="int" />
+          <Property Name="nBc" Type="int" />
+          <Property Name="nTAc" Type="int" />
+          <Property Name="nTBc" Type="int" />
+          <Property Name="nTQty" Type="int" />
+          <Property Name="nTickQty" Type="int" />
+          <Property Name="nYQty" Type="int" />
+          <Property Name="DataTime" Type="datetime" />
+          <Property Name="nSimulate" Type="int" />
+        </EntityType>
+        <EntityContainer Name="SFMSModelStoreContainer">
+          <EntitySet Name="StockData" EntityType="Self.StockData" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SFMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="StockData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sDecimal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sStockIdx" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sTypeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MarketNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StockNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StockName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nAsk" Type="Int32" />
+          <Property Name="fAsk" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nBid" Type="Int32" />
+          <Property Name="fBid" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nOpen" Type="Int32" />
+          <Property Name="fOpen" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nClose" Type="Int32" />
+          <Property Name="fClose" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nUp" Type="Int32" />
+          <Property Name="fUp" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nDown" Type="Int32" />
+          <Property Name="fDown" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nHigh" Type="Int32" />
+          <Property Name="fHigh" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nLow" Type="Int32" />
+          <Property Name="fLow" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nRef" Type="Int32" />
+          <Property Name="fRef" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="nFutureOI" Type="Int32" />
+          <Property Name="nAc" Type="Int32" />
+          <Property Name="nBc" Type="Int32" />
+          <Property Name="nTAc" Type="Int32" />
+          <Property Name="nTBc" Type="Int32" />
+          <Property Name="nTQty" Type="Int32" />
+          <Property Name="nTickQty" Type="Int32" />
+          <Property Name="nYQty" Type="Int32" />
+          <Property Name="DataTime" Type="DateTime" Precision="3" />
+          <Property Name="nSimulate" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="SFMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StockData" EntityType="Self.StockData" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SFMSModelStoreContainer" CdmEntityContainer="SFMSEntities">
+          <EntitySetMapping Name="StockData">
+            <EntityTypeMapping TypeName="SFMSModel.StockData">
+              <MappingFragment StoreEntitySet="StockData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="sDecimal" ColumnName="sDecimal" />
+                <ScalarProperty Name="sStockIdx" ColumnName="sStockIdx" />
+                <ScalarProperty Name="sTypeNo" ColumnName="sTypeNo" />
+                <ScalarProperty Name="MarketNo" ColumnName="MarketNo" />
+                <ScalarProperty Name="StockNo" ColumnName="StockNo" />
+                <ScalarProperty Name="StockName" ColumnName="StockName" />
+                <ScalarProperty Name="nAsk" ColumnName="nAsk" />
+                <ScalarProperty Name="fAsk" ColumnName="fAsk" />
+                <ScalarProperty Name="nBid" ColumnName="nBid" />
+                <ScalarProperty Name="fBid" ColumnName="fBid" />
+                <ScalarProperty Name="nOpen" ColumnName="nOpen" />
+                <ScalarProperty Name="fOpen" ColumnName="fOpen" />
+                <ScalarProperty Name="nClose" ColumnName="nClose" />
+                <ScalarProperty Name="fClose" ColumnName="fClose" />
+                <ScalarProperty Name="nUp" ColumnName="nUp" />
+                <ScalarProperty Name="fUp" ColumnName="fUp" />
+                <ScalarProperty Name="nDown" ColumnName="nDown" />
+                <ScalarProperty Name="fDown" ColumnName="fDown" />
+                <ScalarProperty Name="nHigh" ColumnName="nHigh" />
+                <ScalarProperty Name="fHigh" ColumnName="fHigh" />
+                <ScalarProperty Name="nLow" ColumnName="nLow" />
+                <ScalarProperty Name="fLow" ColumnName="fLow" />
+                <ScalarProperty Name="nRef" ColumnName="nRef" />
+                <ScalarProperty Name="fRef" ColumnName="fRef" />
+                <ScalarProperty Name="nFutureOI" ColumnName="nFutureOI" />
+                <ScalarProperty Name="nAc" ColumnName="nAc" />
+                <ScalarProperty Name="nBc" ColumnName="nBc" />
+                <ScalarProperty Name="nTAc" ColumnName="nTAc" />
+                <ScalarProperty Name="nTBc" ColumnName="nTBc" />
+                <ScalarProperty Name="nTQty" ColumnName="nTQty" />
+                <ScalarProperty Name="nTickQty" ColumnName="nTickQty" />
+                <ScalarProperty Name="nYQty" ColumnName="nYQty" />
+                <ScalarProperty Name="DataTime" ColumnName="DataTime" />
+                <ScalarProperty Name="nSimulate" ColumnName="nSimulate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
