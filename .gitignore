@@ -9,12 +9,4 @@ Thumbs.db
 *.vssscc
 */Temp/*
 *.suo
-web.config
-app.config
-*/web.config
-*/app.config
-*/*/web.config
-*/*/app.config
-System/ContentCertification/packages/*
-System/ContentCertification/LocalTesting/*
 System/*/.vs
