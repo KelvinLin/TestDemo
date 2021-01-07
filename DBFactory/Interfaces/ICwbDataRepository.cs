@@ -7,6 +7,6 @@ namespace DBFactory.Interfaces
 {
     public interface ICwbDataRepository
     {
-        DataLayerMessage AddStockTicksEntity2();
+        DataLayerMessage AddWeatherInfos(List<tblWeatherInfo> entities);
     }
 }

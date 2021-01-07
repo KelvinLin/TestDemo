@@ -3,3 +3,17 @@
     ViewBag.Title = Model.Titlte;
 }
 
+
+
+
+@foreach (var loc in Model.LocationInfo)
+{
+    <p><b> @loc.Key </b></p>
+
+    foreach (var info in loc.Value)
+    {
+        <p> @info.TimeInfo   <span style="color:brown"> @info.Weather</span> </p>
+    }
+    <br/>
+
+}

@@ -25,6 +25,6 @@ namespace DBFactory
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<StockData> StockData { get; set; }
+        public virtual DbSet<tblWeatherInfo> tblWeatherInfo { get; set; }
     }
 }

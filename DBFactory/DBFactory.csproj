@@ -71,7 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SFMS_Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="StockData.cs">
+    <Compile Include="tblWeatherInfo.cs">
       <DependentUpon>SFMS_Model.tt</DependentUpon>
     </Compile>
   </ItemGroup>

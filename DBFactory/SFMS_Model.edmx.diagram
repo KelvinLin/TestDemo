@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="27dbc5ab0c394175ba8279a5ebbfe0b4" Name="Diagram1" ZoomLevel="93">
-        <EntityTypeShape EntityType="SFMSModel.StockData" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SFMSModel.tblWeatherInfo" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

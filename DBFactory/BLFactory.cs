@@ -1,4 +1,5 @@
 ﻿using DBFactory.Interfaces;
+using DBFactory.Repository;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -58,12 +59,23 @@ namespace DBFactory
                 SFMSContext = value;
             }
         }
-
+        public ICwbDataRepository CwbDataRepository
+        {
+            [DebuggerStepThrough]
+            get
+            {
+                if (cwbDataRepository == null)
+                {
+                    cwbDataRepository = new CwbDataRepository(this) { SFMSDataContext = SFMSDataContext };
+                }
+                return cwbDataRepository;
+            }
+        }
 
         #endregion
 
         #region IDisposable Members
-      
+
         public void Dispose()
         {
             if (SFMSContext != null)
